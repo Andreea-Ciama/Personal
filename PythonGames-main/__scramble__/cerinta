@@ -1,0 +1,34 @@
+You must implement the Scramble! console-based game. The objective of the game is to order the scrambled letters of a sentence
+into the correct order, by switching the places of pairs of letters, one pair at a time. In each word, the first and last letter
+will always be correct. There can be single-word sentences.
+
+    e.g. Given the word 'salcmbre', you can make the following switches: salcmbre->sclambre->scramble.
+Program functionality is as follows:
+        1. A new game starts each time the program is started. The word or sentence played is selected randomly by the program
+        from one of the entries stored in a text file [1p]. The program scrambles the word or sentence in the following way: the
+        first and last letter of each word is kept in place, the rest are shuffled randomly (it is possible to move letters
+        between words). The game starts with a score equal to the number of letters in the given word or sentence, not counting
+        spaces. The scrambled sentence is printed at the console [2p].
+                e.g. The sentence 'Dream without fear' can be shuffled to 'Doahm wueirtt fear'. Its score is 16.
+
+
+        2. The user can swap two letters using the following command: swap <word1> <letter1> <word2> <letter2>.
+        The word/letter parameter pairs illustrate the indices of the word and letter to be swapped. After every swap, the updated
+        sentence is printed to the console [2p]. In case the command is not complete, one of the indices supplied is incorrect
+        or indices include the first or last letter of a word the program will provide an error message [1p].
+                e.g. 'swap 01-03' in the previous example will swap the places of letters 'a' and 'c' (salcmbresclambre)
+
+
+        3. Each time the user swaps two letters, their score is decreased by 1. The updated score is printed to the console [1p].
+
+
+        4.The user can undo the last swap operation. This does not affect the score [1p].
+
+
+        5. The game ends when one of the following conditions are met: player score is 0 (defeat), or the letters comprising
+        the sentence are put into correct order (victory!). In either case, the player receives a corresponding message [1p].
+
+🐍 Make sure the program does not crash, regardless of user input.
+🐍 Implement a layered architecture solution with Repository, Controller and Ul classes.
+🐍 Provide specification and tests for the non-trivial methods in the Repository and
+   Controller layers. Functionalities without specification or tests are graded at 50% value.
